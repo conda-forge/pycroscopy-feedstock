@@ -1,6 +1,6 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.59.7" %}
-{% set sha256 = "130e48a0dfea779a2a1f4bfad4257fe998d51b94261657263bef30c78d663112" %}
+{% set version = "0.59.8" %}
+{% set sha256 = "f9cc05bd4bbda0d8094c522452f26c3e89bc0e72296a74df402541415b7e31f7" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 2
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
