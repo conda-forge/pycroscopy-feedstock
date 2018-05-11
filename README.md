@@ -21,14 +21,16 @@ traceability, reproducibility, and provenance.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pycroscopy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pycroscopy-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pycroscopy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pycroscopy-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pycroscopy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pycroscopy-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pycroscopy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pycroscopy-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pycroscopy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pycroscopy-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pycroscopy-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pycroscopy-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycroscopy/badges/version.svg)](https://anaconda.org/conda-forge/pycroscopy)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycroscopy/badges/downloads.svg)](https://anaconda.org/conda-forge/pycroscopy)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pycroscopy-green.svg)](https://anaconda.org/conda-forge/pycroscopy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycroscopy.svg)](https://anaconda.org/conda-forge/pycroscopy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycroscopy.svg)](https://anaconda.org/conda-forge/pycroscopy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycroscopy.svg)](https://anaconda.org/conda-forge/pycroscopy) |
 
 Installing pycroscopy
 =====================
