@@ -38,7 +38,7 @@ requirements:
     - ipywidgets >=5.2.2
     - ipython >=5.1.0,<6  # [py<34]
     - ipython >=6  # [py>=34]
-    - pyqt5  # [py35]
+    - pyqt >=5  # [py35]
     - six
 
 test:
