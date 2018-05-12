@@ -23,7 +23,7 @@ requirements:
     - pytest-runner
   run:
     - python
-    - numpy_groupies >=0.9.6
+    - numpy_groupies >=0.9.7
     - pyqtgraph >=0.10
     - h5py >=2.6.0
     - igor
@@ -34,10 +34,12 @@ requirements:
     - psutil
     - scikit-image >=0.12.3
     - scipy >=0.17.1
-    - numpy >=1.11.0
+    - numpy >=1.13.0
     - ipywidgets >=5.2.2
     - ipython >=5.1.0,<6  # [py<34]
     - ipython >=6  # [py>=34]
+    - pyqt5  # [py=35]
+    - six
 
 test:
   imports:
