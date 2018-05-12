@@ -23,7 +23,7 @@ requirements:
     - pytest-runner
   run:
     - python
-    - numpy_groupies >=0.9.7
+    - numpy_groupies =0.9.7
     - pyqtgraph >=0.10
     - h5py >=2.6.0
     - igor
