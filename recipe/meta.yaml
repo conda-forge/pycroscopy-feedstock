@@ -1,6 +1,6 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.60.1" %}
-{% set sha256 = "9c74936a68bc5f8172d5bdbb6f987664a4babf18bb99b3db1c2fc54b966af562" %}
+{% set version = "0.60.2" %}
+{% set sha256 = "7a295329590803c415fd84e49ec2292852be9e9974c83cdf6e8dba989276113b" %}
 
 package:
   name: {{ name|lower }}
