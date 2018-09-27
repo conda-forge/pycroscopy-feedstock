@@ -13,22 +13,16 @@ source:
 
 build:
   number: 0
-  script: |
-    conda remove -y pillow
-    
-    conda install -y --channel conda-forge pillow=5.2.0
-    
-    "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - python
     - pip
-    - setuptools
     - pytest-runner
   run:
     - python
-    - numpy_groupies =0.9.7
+    - numpy_groupies ==0.9.7
     - pyqtgraph >=0.10
     - h5py >=2.6.0
     - igor
