@@ -41,7 +41,7 @@ requirements:
     - six
     - pyusid
     - gwyfile
-    - unittest2  # [py2k]
+    - unittest2  # [py27]
 
 test:
   imports:
