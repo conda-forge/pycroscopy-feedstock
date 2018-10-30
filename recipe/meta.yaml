@@ -42,6 +42,7 @@ requirements:
     - pyusid
     - gwyfile
     - unittest2  # [py27]
+    - pillow >5.2
 
 test:
   imports:
