@@ -1,6 +1,6 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.60.2" %}
-{% set sha256 = "7a295329590803c415fd84e49ec2292852be9e9974c83cdf6e8dba989276113b" %}
+{% set version = "0.60.3" %}
+{% set sha256 = "9db4a223a162aa8dabed2948b625e06f27b9ba99f99ea40f3b0ffc2fce8fdfcf" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -35,14 +35,13 @@ requirements:
     - scipy >=0.17.1
     - numpy >=1.13.0
     - ipywidgets >=5.2.2
-    - ipython >=5.1.0,<6  # [py27 or py34]  # IPython 6.0+ does not support Python 2.6, 2.7, 3.0, 3.1, or 3.2
-    - ipython >=6  # [not (py27 or py34)]  # Beginning with IPython 6.0, Python 3.3 and above is required.
-    - pyqt >=5  # [not (py27 or py34)]
+    - ipython >=5.1.0,<6  # [py2k]  # IPython 6.0+ does not support Python 2.6, 2.7, 3.0, 3.1, or 3.2
+    - ipython >=6  # [py3k]  # Beginning with IPython 6.0, Python 3.3 and above is required.
+    - pyqt >=5  # [py3k]
     - six
     - pyusid
     - gwyfile
     - unittest2  # [py27]
-    - pillow >5.2
 
 test:
   imports:
