@@ -1,6 +1,5 @@
 {% set name = "pyCroscopy" %}
 {% set version = "0.60.3" %}
-{% set sha256 = "9db4a223a162aa8dabed2948b625e06f27b9ba99f99ea40f3b0ffc2fce8fdfcf" %}
 
 package:
   name: {{ name|lower }}
@@ -9,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 9db4a223a162aa8dabed2948b625e06f27b9ba99f99ea40f3b0ffc2fce8fdfcf
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
@@ -40,6 +39,7 @@ requirements:
     - pyqt >=5  # [py3k]
     - six
     - pyusid
+    - numba
     - gwyfile
     - unittest2  # [py27]
 
