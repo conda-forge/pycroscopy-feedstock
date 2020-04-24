@@ -1,5 +1,5 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.60.4" %}
+{% set version = "0.60.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: fb49d366d74954a4027a14e05589c60e50fc18af5f69d278e9bd6720ecc9bb78
+  sha256: c7ddb44db33d5e78b69284e413605f36db2639379955d467ab694908927c0c8b
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -48,7 +48,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Utilities for scientific analysis of nanoscale imaging data'
+  summary: Utilities for scientific analysis of nanoscale imaging data
   description: |
     pycroscopy is a python package for image processing and scientific analysis
     of imaging modalities such as multi-frequency scanning probe microscopy,
