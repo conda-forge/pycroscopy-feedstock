@@ -10,34 +10,35 @@ source:
   sha256: 9824ac5e2a86377318a0433d6570eccdd2ae68dfd0a26e0a44dff7a720c3edbe
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - python
+    - python >=3
     - pip
     - pytest-runner
   run:
-    - python
-    - numpy_groupies ==0.9.7
-    - h5py >=2.6.0
-    - igor
-    - matplotlib >=2.0.0
-    - scikit-learn >=0.17.1
-    - xlrd >=1.0.0
-    - joblib >=0.11.0
-    - psutil
-    - scikit-image >=0.12.3
-    - scipy >=0.17.1
+    - python >=3
     - numpy >=1.13.0
-    - ipywidgets >=5.2.2
-    - ipython >=5.1.0,<6  # [py2k]  # IPython 6.0+ does not support Python 2.6, 2.7, 3.0, 3.1, or 3.2
-    - ipython >=6  # [py3k]  # Beginning with IPython 6.0, Python 3.3 and above is required.
+    - h5py >=2.6.0
+    - scipy >=0.17.1
+    - scikit-image >=0.12.3
+    - scikit-learn >=0.17.1
+    - matplotlib >=2.0.0
+    - psutil
     - six
-    - pyusid ==0.0.5.1
+    - pillow
+    - joblib >=0.11.0
+    - ipywidgets >=5.2.2
+    - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
+    - numpy_groupies 0.9.7',  # New build of 0.9.8.4 appears to cause build proble
+    - sidpy >=0.0.1
+    - pyUSID >=0.0.8
+    - xlrd >=1.0.0
+    - igor
     - gwyfile
-    - unittest2  # [py27]
 
 test:
   imports:
