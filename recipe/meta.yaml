@@ -1,5 +1,5 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.60.7" %}
+{% set version = "0.60.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 9824ac5e2a86377318a0433d6570eccdd2ae68dfd0a26e0a44dff7a720c3edbe
+  sha256: 47ecd29af587cef72fb1115ba7e83c8c0f5cab3ea287b04e106bc7ad7082d275
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python >=3
     - pip
     - pytest-runner
@@ -35,7 +35,7 @@ requirements:
     - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
     - numpy_groupies 0.9.7  # New build of 0.9.8.4 appears to cause build proble
     - sidpy >=0.0.1
-    - pyUSID >=0.0.8
+    - pyUSID >=0.0.10
     - xlrd >=1.0.0
     - igor
     - gwyfile
