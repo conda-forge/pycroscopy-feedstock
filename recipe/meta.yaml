@@ -35,7 +35,7 @@ requirements:
     - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
     - numpy_groupies 0.9.7  # New build of 0.9.8.4 appears to cause build proble
     - sidpy >=0.0.1
-    - pyUSID >=0.0.8
+    - pyUSID >=0.0.10
     - xlrd >=1.0.0
     - igor
     - gwyfile
