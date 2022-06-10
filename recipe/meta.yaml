@@ -1,5 +1,5 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.60.8" %}
+{% set version = "0.62.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 47ecd29af587cef72fb1115ba7e83c8c0f5cab3ea287b04e106bc7ad7082d275
+  sha256: ccf5a412e751f08c01b72e7f97b7f9c5f6eeac82451145db951d4a9183c063d3
 
 build:
   noarch: python
@@ -22,23 +22,20 @@ requirements:
   run:
     - python >=3
     - numpy >=1.13.0
-    - h5py >=2.6.0
     - scipy >=0.17.1
     - scikit-image >=0.12.3
     - scikit-learn >=0.17.1
     - matplotlib >=2.0.0
+    - pytorch
+    - tensorly >=0.6.0
+    - tqdm
     - psutil
     - six
     - pillow
     - joblib >=0.11.0
     - ipywidgets >=5.2.2
     - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
-    - numpy_groupies 0.9.7  # New build of 0.9.8.4 appears to cause build proble
-    - sidpy >=0.0.1
-    - pyUSID >=0.0.10
-    - xlrd >=1.0.0
-    - igor
-    - gwyfile
+    - sidpy >=0.0.6
 
 test:
   imports:
@@ -51,18 +48,13 @@ about:
   license_file: LICENSE.txt
   summary: Utilities for scientific analysis of nanoscale imaging data
   description: |
-    pycroscopy is a python package for image processing and scientific analysis
-    of imaging modalities such as multi-frequency scanning probe microscopy,
-    scanning tunneling spectroscopy, x-ray diffraction microscopy, and transmission
-    electron microscopy. pycroscopy uses a data-centric model wherein the raw data
-    collected from the microscope, results from analysis and processing routines
-    are all written to standardized hierarchical data format (HDF5) files for
-    traceability, reproducibility, and provenance.
-  doc_url: https://pycroscopy.github.io/pycroscopy/index.html
+    pycroscopy is a python package for analysis of nanoscale imaging data
+  doc_url: https://pycroscopy.github.io/pycroscopy/about.html
   dev_url: https://github.com/pycroscopy/pycroscopy
 
 extra:
   recipe-maintainers:
-    - carlodri
+    - ramav87
+    - gduscher
     - ssomnath
-    - compphyschris
+    - carlodri
