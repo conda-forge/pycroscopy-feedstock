@@ -13,13 +13,7 @@ Development: https://github.com/pycroscopy/pycroscopy
 
 Documentation: https://pycroscopy.github.io/pycroscopy/index.html
 
-pycroscopy is a python package for image processing and scientific analysis
-of imaging modalities such as multi-frequency scanning probe microscopy,
-scanning tunneling spectroscopy, x-ray diffraction microscopy, and transmission
-electron microscopy. pycroscopy uses a data-centric model wherein the raw data
-collected from the microscope, results from analysis and processing routines
-are all written to standardized hierarchical data format (HDF5) files for
-traceability, reproducibility, and provenance.
+pycroscopy is a python package for analyzing nanoscale imaging and spectroscopy data
 
 
 Current build status
@@ -128,7 +122,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@carlodri](https://github.com/carlodri/)
-* [@ssomnath](https://github.com/ssomnath/)
 * [@ramav87](https://github.com/ramav87/)
 * [@gduscher](https://github.com/gduscher/)
+* [@ssomnath](https://github.com/ssomnath/)
+* [@carlodri](https://github.com/carlodri/)
