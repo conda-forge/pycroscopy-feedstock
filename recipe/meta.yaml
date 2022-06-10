@@ -26,6 +26,9 @@ requirements:
     - scikit-image >=0.12.3
     - scikit-learn >=0.17.1
     - matplotlib >=2.0.0
+    - torch >=1.0.0
+    - tensorly >=0.6.0
+    - tqdm
     - psutil
     - six
     - pillow
@@ -33,7 +36,6 @@ requirements:
     - ipywidgets >=5.2.2
     - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
     - sidpy >=0.0.6
-    - tqdm
 
 test:
   imports:
