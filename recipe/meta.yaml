@@ -1,5 +1,5 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.62.0" %}
+{% set version = "0.60.8" %}
 
 package:
   name: {{ name|lower }}
