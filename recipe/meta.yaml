@@ -33,6 +33,7 @@ requirements:
     - ipywidgets >=5.2.2
     - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
     - sidpy >=0.0.6
+    - tqdm
 
 test:
   imports:
