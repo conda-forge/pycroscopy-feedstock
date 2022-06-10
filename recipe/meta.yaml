@@ -26,9 +26,7 @@ requirements:
     - scikit-image >=0.12.3
     - scikit-learn >=0.17.1
     - matplotlib >=2.0.0
-    - pytorch >=1.0.0
-    - torchvision
-    - torchaudio
+    - pytorch
     - tensorly >=0.6.0
     - tqdm
     - psutil
