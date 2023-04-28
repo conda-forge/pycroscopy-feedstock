@@ -27,13 +27,10 @@ requirements:
     - scikit-learn >=0.17.1
     - matplotlib >=2.0.0
     - pytorch
+    - dask-core
     - tensorly >=0.6.0
     - tqdm
-    - psutil
-    - six
-    - pillow
-    - joblib >=0.11.0
-    - ipywidgets >=5.2.2
+    - pysptools
     - ipython  # Beginning with IPython 6.0, Python 3.3 and above is require
     - sidpy >=0.0.6
 
