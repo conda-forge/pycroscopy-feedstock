@@ -1,5 +1,5 @@
 {% set name = "pyCroscopy" %}
-{% set version = "0.62.0" %}
+{% set version = "0.63.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: ccf5a412e751f08c01b72e7f97b7f9c5f6eeac82451145db951d4a9183c063d3
+  sha256: 5c7093d97d0f40532e7553aa299185975ebdf47f247b35a363ec79b297d1b770
 
 build:
   noarch: python
