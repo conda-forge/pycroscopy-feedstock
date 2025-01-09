@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
   sha256: ccf5a412e751f08c01b72e7f97b7f9c5f6eeac82451145db951d4a9183c063d3
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - pytest-runner
   run:
-    - python >=3
+    - python >={{ python_min }}
     - numpy >=1.13.0
     - scipy >=0.17.1
     - scikit-image >=0.12.3
@@ -38,6 +38,8 @@ requirements:
     - sidpy >=0.0.6
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pycroscopy
 
