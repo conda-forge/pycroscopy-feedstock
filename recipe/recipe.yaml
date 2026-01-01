@@ -1,0 +1,69 @@
+schema_version: 1
+
+context:
+  name: pyCroscopy
+  version: 0.63.3
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|lower }}-${{ version }}.tar.gz
+  sha256: d51e3733ee829a52ac4839f58e2880baa3488380022d8536d43e2671cdf15ac4
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+    - pytest-runner
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.13.0
+    - scipy >=0.17,<1.10.2
+    - scikit-image >=0.12.3
+    - scikit-learn >=0.17.1
+    - matplotlib-base >=2.0.0
+    - pytorch >=1.0.0
+    - tensorly >=0.6.0
+    - tqdm
+    - ipywidgets >=5.2.2
+    - simpleitk
+    - ipython
+    - ipympl
+    - pywget
+    - SciFiReaders >=0.10.0
+    - sidpy >=0.12.1
+    - cvxopt >=1.2.7
+    - pyTEMlib >=0.2023.8.0
+    - pysptools
+
+tests:
+  - python:
+      imports:
+        - pycroscopy
+      pip_check: false
+      python_version: ${{ python_min }}.*
+
+about:
+  license: MIT
+  license_file: LICENSE.txt
+  summary: Utilities for scientific analysis of nanoscale imaging data
+  description: |
+    pycroscopy is a python package for analysis of nanoscale imaging data
+  homepage: https://github.com/pycroscopy/pycroscopy
+  repository: https://github.com/pycroscopy/pycroscopy
+  documentation: https://pycroscopy.github.io/pycroscopy/about.html
+
+extra:
+  recipe-maintainers:
+    - ramav87
+    - gduscher
+    - ssomnath
+    - carlodri
